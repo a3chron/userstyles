@@ -62,6 +62,8 @@
           color: @text !important;
       }
       
+      // video
+      
       .dark\:bg-secondary:is(.dark *) {
           background-color: @base !important;
           color: @text !important;
@@ -109,6 +111,70 @@
       
       .tum-live-thumbnail-progress > div > span:is(.dark *) {
           background-color: @accent !important;
+      }
+      
+      // homepage
+      
+      .dark\:bg-indigo-500\/25:is(.dark *) {
+          background-color: @accent;
+          color: @crust !important;
+          border: none;
+          font-weight: 500;
+      }
+      
+      .tum-live-font-primary:is(.dark *) {
+          color: @accent !important;
+      }
+      
+      .tum-live-border-primary:is(.dark *) {
+          border-color: @accent !important;
+      }
+      
+      .tum-live-footer:is(.dark *) {
+          background-color: @mantle !important;
+      }
+      
+      .tum-live-side-navigation-group-item.hover:hover:is(.dark *) {
+          background-color: @mantle !important;
+          color: @text !important;
+      }
+      
+      .tum-live-course-list-item:hover:is(.dark *) {
+          background-color: @mantle !important;
+          color: @text !important;
+      }
+      
+      .tum-live-notification-info:is(.dark *) {
+          background-color: rgba(@accent, 0.2) !important;
+          border-color: @accent;
+      }
+      
+      .tum-live-notification:is(.dark *) {
+          color: @text;
+      }
+      
+      .tum-live-notification-info > .icon:is(.dark *) {
+          color: @accent !important;
+      }
+      
+      .tum-live-side-navigation:is(.dark *) {
+          color: @text !important;
+      }
+      
+      .text-3:is(.dark *) {
+          color: @text !important;
+      }
+      
+      .tum-live-course-list-item .title:is(.dark *) {
+          color: @text !important;
+      }
+      
+      .tum-live-course-list-item .links:is(.dark *) {
+          color: @subtext0 !important;
+      }
+      
+      .tum-live-footer a:is(.dark *) {
+          color: @text !important;
       }
     }
 }
