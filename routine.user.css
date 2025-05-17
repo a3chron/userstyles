@@ -1,0 +1,263 @@
+/* ==UserStyle==
+@name           Routine
+@namespace      github.com/kurtschambach/userstyles
+@version        1.0.0
+@description    simple catppuccin theme
+@author         a3chron
+@license MIT
+
+@preprocessor  less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@-moz-document url-prefix("https://app.routine.co/") {
+  :root {
+    @media (prefers-color-scheme: light) {
+      #catppuccin(@lightFlavor);
+    }
+    @media (prefers-color-scheme: dark) {
+      #catppuccin(@darkFlavor);
+    }
+  }
+
+  #catppuccin(@flavor) {
+    @rosewater: @catppuccin[@@flavor][@rosewater];
+    @flamingo: @catppuccin[@@flavor][@flamingo];
+    @pink: @catppuccin[@@flavor][@pink];
+    @mauve: @catppuccin[@@flavor][@mauve];
+    @red: @catppuccin[@@flavor][@red];
+    @maroon: @catppuccin[@@flavor][@maroon];
+    @peach: @catppuccin[@@flavor][@peach];
+    @yellow: @catppuccin[@@flavor][@yellow];
+    @green: @catppuccin[@@flavor][@green];
+    @teal: @catppuccin[@@flavor][@teal];
+    @sky: @catppuccin[@@flavor][@sky];
+    @sapphire: @catppuccin[@@flavor][@sapphire];
+    @blue: @catppuccin[@@flavor][@blue];
+    @lavender: @catppuccin[@@flavor][@lavender];
+    @text: @catppuccin[@@flavor][@text];
+    @subtext1: @catppuccin[@@flavor][@subtext1];
+    @subtext0: @catppuccin[@@flavor][@subtext0];
+    @overlay2: @catppuccin[@@flavor][@overlay2];
+    @overlay1: @catppuccin[@@flavor][@overlay1];
+    @overlay0: @catppuccin[@@flavor][@overlay0];
+    @surface2: @catppuccin[@@flavor][@surface2];
+    @surface1: @catppuccin[@@flavor][@surface1];
+    @surface0: @catppuccin[@@flavor][@surface0];
+    @base: @catppuccin[@@flavor][@base];
+    @mantle: @catppuccin[@@flavor][@mantle];
+    @crust: @catppuccin[@@flavor][@crust];
+    @accent: @catppuccin[@@flavor][@@accentColor];
+
+      
+      #app {
+          color: @text !important;
+          background: @base !important;
+      }
+      
+      #menu {
+          background: @mantle !important;
+          border-right: 1px solid rgba(@text, 0.4);
+      }
+      
+      #content {
+          background: @base !important;
+      }
+      
+      .planner-footer {
+          background: @base !important;
+      }
+      
+      .task-list {
+          background: @base !important;
+      }
+      
+      .topbar {
+          background: @base !important;
+      }
+      
+      --fc-event-text-color: @text !important;
+      
+      .event-separator {
+          background-color: @text !important;
+      }
+      
+      .calendar-border {
+          background-color: @text !important;
+          margin-left: 95%;
+          margin-top: 2px;
+      }
+      
+      .planner-event:not(.isSelected):not(.isPassive):not(.no):not(.noOne):is(.isPast).default.calendar-a--dark .drag-wrapper .calendar-border {
+          background-color: rgba(@text, 0.3) !important;
+      }
+      
+      .planner-event.isSelected.calendar-a--dark .drag-wrapper .calendar-border {
+          background-color: @crust !important;
+      }
+      
+      // events
+      
+      .planner-event:not(.isSelected):not(.isPassive):not(.no):not(.noOne).default.calendar-a--dark .drag-wrapper, .planner-event.isPassive:not(.isSelected) .drag-wrapper {
+          background-color: @mantle !important;
+          border: 2px solid rgba(@accent, 0.9) !important;
+          border-radius: 8px !important;
+          transition: background-color .2s ease-out !important;
+          transition: border .2s ease-out !important;
+      }
+      
+      .planner-event:not(.isSelected):not(.isPassive):not(.no):not(.noOne).default.calendar-a--dark .drag-wrapper:not(.isMoving):hover, .planner-event.isPassive:not(.isSelected) .drag-wrapper:hover {
+          background-color: @crust;
+          border: 2px solid @accent;
+      }
+      
+      .planner-event:not(.isSelected):not(.isPassive):not(.no):not(.noOne):is(.isPast).default.calendar-a--dark .drag-wrapper {
+          background-color: @mantle !important;
+          border: 2px solid rgba(@subtext0, 0.4) !important;
+          border-radius: 8px;
+      }
+      
+      .planner-event.isSelected.calendar-a--dark .drag-wrapper {
+          background-color: @accent !important;
+          color: @crust;
+      }
+      
+      .fc-event {
+          border-radius: 8px !important;
+      }
+      
+      .planner-event:not(.isSelected) .drag-wrapper .event-text {
+          color: @text !important;
+      }
+      
+      .theme--dark button.base-button.none.main.secondary.disabled {
+          background-color: @mantle !important;
+          color: @text !important;
+          border: 1px solid @crust !important;
+      }
+      
+      .theme--dark button.base-button.none.main.secondary.active {
+          background-color: @crust !important;
+          color: @text !important;
+          border: 1px solid @crust !important;
+      }
+      
+      .badge {
+          background-color: @accent !important;
+      }
+      
+      .badge.counter {
+          color: @crust !important;
+      }
+      
+      .fc-col-header-cell-cushion .isToday .highlight {
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          align-content: center;
+          color: @crust !important;
+          background-color: @accent !important;
+      }
+      
+      .fc-timegrid-now-indicator-line {
+          border-color: @text !important;
+          background-color: @text !important;
+      }
+      
+      .fc-timegrid-now-indicator-line::before {
+          background-color: @text !important;
+      }
+      
+      // checkbox
+      
+      .toggle.checked .toggle-checkbox:checked + .toggle-switch {
+          background-color: @accent !important;
+      }
+      
+      .toggle-switch::before {
+          background: @crust !important;
+      }
+      
+      // red button
+      button.base-button.red, button.base-button.red.main {
+          background-color: @red !important;
+          color: @crust !important;
+          border: none;
+      }
+      
+      .title.opened {
+          color: @accent !important;
+      }
+      
+      button.base-button.none.auxiliary[data-v-62edeaee]:hover:not(.disabled):not(.loading) {
+          background: @mantle !important;
+      }
+      
+      // menu bar
+      
+      li.menu-item.selected svg, li.menu-item:hover svg {
+        box-shadow: 0 0 1px 7px @crust !important;
+      }
+      
+      li.menu-item.selected svg path {
+          stroke: @accent !important;
+      }
+      
+      // search
+      
+      .search {
+          caret-color: @accent !important;
+      }
+      
+      .calendar.isWeekView .fc .fc-col-header-cell-cushion:hover {
+          background-color: @crust !important;
+      }
+      
+      .theme--dark .task-checkbox label span {
+          color: @text !important;
+      }
+      
+      .theme--dark .base-input .textarea {
+          caret-color: @accent !important;
+          color: @text !important;
+      }
+      
+      .theme--dark .base-input .textarea::placeholder {
+          color: @subtext0;
+      }
+      
+      // checkboxes
+      
+      input[type="checkbox"] {
+          border: 1px solid @subtext1 !important;
+          cursor: pointer;
+      }
+      
+      .check-container path {
+          fill: @crust !important;
+      }
+      
+      .check-container {
+          background-color: @accent !important;
+          cursor: pointer;
+      }
+      
+      .notification {
+          color: @text !important;
+      }
+      
+      .notification em {
+          color: @accent !important;
+      }
+    }
+}
+
+/* deno-fmt-ignore */
+@catppuccin: {
+  @latte:     { @rosewater: #dc8a78; @flamingo: #dd7878; @pink: #ea76cb; @mauve: #8839ef; @red: #d20f39; @maroon: #e64553; @peach: #fe640b; @yellow: #df8e1d; @green: #40a02b; @teal: #179299; @sky: #04a5e5; @sapphire: #209fb5; @blue: #1e66f5; @lavender: #7287fd; @text: #4c4f69; @subtext1: #5c5f77; @subtext0: #6c6f85; @overlay2: #7c7f93; @overlay1: #8c8fa1; @overlay0: #9ca0b0; @surface2: #acb0be; @surface1: #bcc0cc; @surface0: #ccd0da; @base: #eff1f5; @mantle: #e6e9ef; @crust: #dce0e8; };
+  @frappe:    { @rosewater: #f2d5cf; @flamingo: #eebebe; @pink: #f4b8e4; @mauve: #ca9ee6; @red: #e78284; @maroon: #ea999c; @peach: #ef9f76; @yellow: #e5c890; @green: #a6d189; @teal: #81c8be; @sky: #99d1db; @sapphire: #85c1dc; @blue: #8caaee; @lavender: #babbf1; @text: #c6d0f5; @subtext1: #b5bfe2; @subtext0: #a5adce; @overlay2: #949cbb; @overlay1: #838ba7; @overlay0: #737994; @surface2: #626880; @surface1: #51576d; @surface0: #414559; @base: #303446; @mantle: #292c3c; @crust: #232634; };
+  @macchiato: { @rosewater: #f4dbd6; @flamingo: #f0c6c6; @pink: #f5bde6; @mauve: #c6a0f6; @red: #ed8796; @maroon: #ee99a0; @peach: #f5a97f; @yellow: #eed49f; @green: #a6da95; @teal: #8bd5ca; @sky: #91d7e3; @sapphire: #7dc4e4; @blue: #8aadf4; @lavender: #b7bdf8; @text: #cad3f5; @subtext1: #b8c0e0; @subtext0: #a5adcb; @overlay2: #939ab7; @overlay1: #8087a2; @overlay0: #6e738d; @surface2: #5b6078; @surface1: #494d64; @surface0: #363a4f; @base: #24273a; @mantle: #1e2030; @crust: #181926; };
+  @mocha:     { @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #cba6f7; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @lavender: #b4befe; @text: #cdd6f4; @subtext1: #bac2de; @subtext0: #a6adc8; @overlay2: #9399b2; @overlay1: #7f849c; @overlay0: #6c7086; @surface2: #585b70; @surface1: #45475a; @surface0: #313244; @base: #1e1e2e; @mantle: #181825; @crust: #11111b; };
+}
