@@ -228,6 +228,7 @@
           color: @subtext0;
       }
       
+      
       // checkboxes
       
       input[type="checkbox"] {
@@ -250,6 +251,14 @@
       
       .notification em {
           color: @accent !important;
+      }
+      
+      
+      // tasks
+      
+      .task-button.isEditing {
+          background-color: @mantle !important;
+          border-radius: 8px !important;
       }
     }
 }
