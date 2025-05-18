@@ -260,6 +260,84 @@
           background-color: @mantle !important;
           border-radius: 8px !important;
       }
+      
+      
+      /* AGENDA */
+      
+      .agenda .sidebar .date p span {
+          color: @subtext0 !important;
+      }
+      
+      button.base-button.none.auxiliary.default path {
+          fill: @subtext0 !important;
+      }
+      
+      button.base-button.none.auxiliary.disabled path {
+          fill: @overlay2 !important;
+      }
+      
+      .timeline .line {
+          background-color: @surface0 !important;
+          width: 2px;
+      }
+      
+      .timeline .time {
+          background-color: @crust !important;
+          color: @text !important;
+      }
+      
+      .break-block .break .message {
+          color: @subtext0 !important;
+      }
+      
+      // events
+      
+      .event {
+          background-color: @crust !important;
+          border-radius: 8px !important;
+          border: 2px solid @accent !important;
+      }
+      
+      .event.past {
+          background-color: @mantle !important;
+          border-radius: 8px !important;
+          border: 2px solid @overlay0 !important;
+      }
+      
+      .event.past .line .content-line .left-details .event-title {
+          color: @overlay0 !important;
+      }
+      
+      .event .line .content-line .right-details .event-duration {
+          color: @subtext0 !important;
+      }
+      
+      .event .line .content-line .left-details .event-title {
+          color: @text !important;
+      }
+      
+       // progress line
+      
+      .progress-time .line.before {
+          background-color: @accent !important;
+          height: 2px;
+      }
+      
+      .progress-time .line {
+          background-color: @crust !important;
+          height: 2px;
+      }
+      
+      .event.small .progress-time {
+          bottom: -12px !important;
+          padding-left: 6px;
+          width: calc(100% - 12px) !important;
+      }
+      
+      .progress-time .time {
+          color: @accent !important;
+          background-color: @mantle !important;
+      }
     }
 }
 
