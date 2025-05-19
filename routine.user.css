@@ -80,6 +80,8 @@
       
       --fc-event-text-color: @text !important;
       
+      /* CALENDAR */
+      
       .event-separator {
           background-color: @text !important;
       }
@@ -96,6 +98,11 @@
       
       .planner-event.isSelected.calendar-a--dark .drag-wrapper .calendar-border {
           background-color: @crust !important;
+      }
+      
+      .task.selected.openable[data-v-339b5793]:not(.editing) {
+          border: 1px solid @accent !important;
+          border-radius: 8px !important;
       }
       
       // events
