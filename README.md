@@ -4,7 +4,14 @@ A little collection of my own userstyles, probably most of them catppuccin theme
 You can either install them via [userstyles.world](https://userstyles.world/user/kurtschambach) or here, 
 although userstyles.world is updated more frequently, GitHub only serves as backup.
 
-## list of userstyles
+## How to use
+
+Get the [stylus extension](https://addons.mozilla.org/de/firefox/addon/styl-us/), 
+and click the install button.
+
+You can find more catppuccin themes at their [official site](https://github.com/catppuccin/userstyles).
+
+## List of userstyles
 
 <details>
   <summary><strong>Routine</strong></summary>
