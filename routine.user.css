@@ -50,6 +50,11 @@
     @mantle: @catppuccin[@@flavor][@mantle];
     @crust: @catppuccin[@@flavor][@crust];
     @accent: @catppuccin[@@flavor][@@accentColor];
+      
+      ::selection {
+          background-color: @accent !important;
+          color: @crust !important;
+      }
 
       
       #app {
@@ -66,6 +71,59 @@
           background: @base !important;
       }
       
+      input {
+          color: @text !important;
+          border-radius: 8px !important;
+          caret-color: @accent !important;
+      }
+      
+      input:focus {
+          background-color: transparent !important;
+      }
+      
+      strong {
+          color: @text !important;
+      }
+      
+      .base-input.hasStyles:hover:not(.isDisabled):not(.isFocused),
+      .attendees-list .parsed-input p:hover:not(.isFocused) {
+          border-color: @surface0 !important;
+      }
+      
+      .base-input.hasStyles.isFocused {
+          background-color: @crust !important;
+          border-color: @crust !important;
+          color: @text !important;
+      }
+      
+      .base-input .input::placeholder,
+      .base-input .textarea::placeholder {
+          color: @subtext0 !important;
+      }
+      
+      :root button.base-button.none.auxiliary.default path.fill,
+      .location .field .icon-container .icon path.fill {
+          fill: #a6addf !important;
+      }
+      
+      .attendees-list .parsed-input [contenteditable][placeholder]:empty::before {
+          color: @subtext0 !important;
+          background: transparent !important;
+      }
+      
+      .attendees-list .parsed-input p.isFocused {
+          color: @subtext0 !important;
+          background: @crust !important;
+      }
+      
+      .text {
+          color: @text !important;
+      }
+      
+      .actions .text {
+          color: @crust !important;
+      }
+      
       .planner-footer {
           background: @base !important;
       }
@@ -78,7 +136,48 @@
           background: @base !important;
       }
       
+      #menu path {
+          fill: @text !important;
+      }
+      
       --fc-event-text-color: @text !important;
+      
+      .tippy-box {
+          background-color: black !important;
+          color: @text !important;
+          border-radius: 8px !important;
+      }
+      
+      .right-click-menu {
+          background-color: @mantle !important;
+          border-color: @surface0 !important;
+        }
+      
+      .right-click-menu .separator {
+          background-color: @surface0 !important;
+      }
+      
+      .base-numbered-header h4 {
+          color: @text !important;
+      }
+      
+      .base-numbered-header span {
+          color: @subtext0 !important;
+      }
+      
+      .agenda .sidebar .date:hover {
+          background-color: @mantle !important;
+          border-radius: 8px !important;
+      }
+      
+      button.base-button.none.main.secondary.default {
+          border-color: @surface0 !important;
+          background-color: @mantle !important;
+      }
+      
+      button.base-button.none.main.secondary.default svg path.fill {
+          fill: @text !important;
+      }
       
       /* CALENDAR */
       
@@ -86,10 +185,117 @@
           background-color: @text !important;
       }
       
+      // borders
+      
+      .container {
+          border-right-color: @surface0 !important;
+      }
+      
+      .calendar.isWeekView .fc th.fc-timegrid-axis,
+      .calendar.isWeekView .fc th.fc-col-header-cell.fc-day {
+          border-bottom-color: @surface0 !important;
+      }
+      
+      .calendar.isWeekView .fc-theme-standard td {
+          border-color: @surface0 !important;
+      }
+      
+      .pane-container {
+          border-bottom-color: @surface0 !important;
+      }
+      
+      .planner-footer {
+          border-top-color: @surface0 !important;
+      }
+      
+      .planner-footer .task-list {
+          border-right-color: @surface0 !important;
+      }
+      
+      .base-title-with-icon .left span {
+          color: @text !important;
+      }
+      
+      .fc-col-header-cell-cushion {
+          color: @subtext0 !important;
+      }
+      
+      .fc-col-header-cell-cushion .darker {
+          color: @text !important;
+      }
+      
+      .task.compact .content .description path {
+          fill: @text !important;
+      }
+      
+      button.base-button.red .left:not(.trueColorsIcon) svg .fill {
+          fill: @crust !important;
+      }
+      
+      #menu nav ul li.menu-item:hover svg {
+          background-color: @crust !important;
+      }
+      
+      #menu .Inbox .fill,
+      #menu .Calendar .fill,
+      #menu .help .fill {
+          fill: @text !important;
+      }
+      
+      #menu .Inbox .stroke,
+      #menu .help .stroke,
+      #menu .Calendar .stroke {
+          fill: @mantle !important;
+          stroke: @text !important;
+      }
+      
+      #menu .Inbox .selected .stroke,
+      #menu .Calendar .selected .stroke {
+          fill: @mantle !important;
+          stroke: @accent !important;
+      }
+      
+      #menu.expanded nav ul li.menu-item:not(.selected) span {
+          color: @text !important;
+      }
+      
+      #menu.expanded nav ul li.menu-item:not(.selected) .inline-counter {
+          background-color: @accent !important;
+          color: @crust !important;
+      }
+      
+      #menu.expanded nav ul li.menu-item.selected {
+          background-color: @crust !important;
+      }
+      
+      #menu.expanded nav ul li.menu-item:hover {
+          background-color: @crust !important;
+      }
+      
+      #menu nav ul li.menu-item.selected span {
+          color: @text !important;
+      }
+      
       .calendar-border {
           background-color: @text !important;
           margin-left: 95%;
           margin-top: 2px;
+      }
+      
+      .fc-timegrid-divider.fc-cell-shaded {
+          border-bottom: 1px solid @surface0 !important;
+      }
+      
+      .calendar.isWeekView .fc .fc-timegrid-slot-label-cushion {
+          color: @text !important;
+      }
+      
+      .calendar .indeterminate-progress-bar__progress {
+          background-color: @accent !important;
+      }
+      
+      .base-title-with-icon .left svg path {
+          fill: @text !important;
       }
       
       .planner-event:not(.isSelected):not(.isPassive):not(.no):not(.noOne):is(.isPast).default.calendar-a--dark .drag-wrapper .calendar-border {
@@ -188,10 +394,18 @@
       }
       
       // red button
-      button.base-button.red, button.base-button.red.main {
+      button.base-button.red, button.base-button.red.main, button.base-button.red .text, button.base-button.red.isExpanded.context-action .right {
           background-color: @red !important;
           color: @crust !important;
           border: none;
+      }
+      
+      button.base-button, button.base-button.main, button.base-button .text {
+          color: @text !important;
+      }
+      
+      button.base-button.isExpanded.context-action .right {
+          color: @subtext0 !important;
       }
       
       .title.opened {
@@ -241,6 +455,8 @@
       input[type="checkbox"] {
           border: 1px solid @subtext1 !important;
           cursor: pointer;
+          background-color: @crust !important;
+          border-radius: 3px !important;
       }
       
       .check-container path {
@@ -268,6 +484,18 @@
           border-radius: 8px !important;
       }
       
+      .task-button:hover,
+      .task.openable:not(.dragging):not(.editing):hover{
+          border-color: @surface0 !important;
+          border-radius: 8px !important;
+      }
+      
+      .task .postpone-button svg path.fill,
+      .task .schedule-button svg path.fill,
+      .task .description path.fill {
+          fill: @text !important;
+      }
+      
       
       /* AGENDA */
       
@@ -284,7 +512,7 @@
       }
       
       .timeline .line {
-          background-color: @surface0 !important;
+          background-color: @mantle !important;
           width: 2px;
       }
       
@@ -343,8 +571,14 @@
       
       .progress-time .time {
           color: @accent !important;
-          background-color: @mantle !important;
+          padding: 0 4px 0 4px !important;
+          border: 2px solid @accent !important;
+          background-color: @crust !important;
       }
+      
+      .itemslist .separator {
+          background: linear-gradient(90deg, @surface0, @base) !important;
+        }
     }
 }
 
