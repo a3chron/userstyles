@@ -1,4 +1,4 @@
-/* ==UserStyle==
+;/* ==UserStyle==
 @name           Routine
 @namespace      github.com/kurtschambach/userstyles
 @version        1.0.0
@@ -82,6 +82,33 @@
       }
       
       strong {
+          color: @text !important;
+      }
+      
+      [stroke*="#4A3734"] {
+          stroke: rgba(@accent, 0.6) !important;
+        }
+      
+      [fill*="url(#b)"] {
+          fill: rgba(@accent, 0.1) !important;
+          stroke: rgba(@accent, 0.8) !important;
+      }
+      
+      [fill*="#4A3734"] {
+          fill: rgba(@accent, 0.6) !important;
+      }
+      
+      .base-skeleton-line .body,
+      .base-skeleton-line .icon {
+          background-color: @mantle !important;
+      }
+      
+      .base-skeleton-line .body::after, 
+      .base-skeleton-line .icon::after {
+          background-image: linear-gradient(270deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.05) 20%,hsla(0,0%,100%,.1) 60%,hsla(0,0%,100%,0));
+      }
+      
+      .empty-tasklist .text p {
           color: @text !important;
       }
       
@@ -175,8 +202,23 @@
           background-color: @mantle !important;
       }
       
+      button.base-button.none.auxiliary.default.selected {
+          background-color: @mantle !important;
+      }
+      
       button.base-button.none.main.secondary.default svg path.fill {
           fill: @text !important;
+      }
+      
+      // icons TODO: move old icons here
+      
+      .upcoming-week .week-header .icon .fill {
+          fill: @surface1 !important;
+      }
+      
+      div.base-link.tertiary a svg .fill,
+      div.base-link.tertiary a:hover svg .fill {
+          fill: @accent !important;
       }
       
       /* CALENDAR */
@@ -188,7 +230,7 @@
       // borders
       
       .container {
-          border-right-color: @surface0 !important;
+          border-right-color: @overlay0 !important;
       }
       
       .calendar.isWeekView .fc th.fc-timegrid-axis,
@@ -579,6 +621,49 @@
       .itemslist .separator {
           background: linear-gradient(90deg, @surface0, @base) !important;
         }
+      
+      
+      /* TASKS */
+      .upcoming-week .vertical-line .line {
+          background: @surface0 !important;
+      }
+      
+      .upcoming-week .separator {
+          background: none !important;
+      }
+      
+      
+      /* NOTES */
+      
+      .page-list-item .item-left .title {
+        color: @text !important;
+      }
+      
+      .page-list-item .item-left .title.opened {
+          color: @accent !important;
+      }
+      
+      .page-list-item:hover {
+          background-color: @mantle !important;
+          border-radius: 8px !important;
+      }
+      
+      .ProseMirror a {
+          color: @text !important;
+          border-bottom-color: @text !important;
+      }
+      
+      .prosemirror-editor .prosemirror-block-handles .handle:hover {
+          background-color: @mantle !important;
+      }
+      
+      .prosemirror-editor .prosemirror-block-handles .handle .stroke {
+          stroke: @text !important;
+      }
+      
+      .titled-document .title-wrapper .title {
+          color: @text !important;
+      }
     }
 }
 
