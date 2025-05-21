@@ -7,7 +7,7 @@ although userstyles.world is updated more frequently, GitHub only serves as a ba
 ## How to use
 
 Get the [stylus extension](https://addons.mozilla.org/de/firefox/addon/styl-us/), 
-and click the install button.
+and click the install button on this page (or userstyles.world) for the style you want to install.
 
 You can find more catppuccin themes at their [official site](https://github.com/catppuccin/userstyles).
 
