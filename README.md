@@ -6,8 +6,9 @@ although userstyles.world is updated more frequently, GitHub only serves as a ba
 
 ## How to use
 
-Get the [stylus extension](https://addons.mozilla.org/de/firefox/addon/styl-us/), 
-and click the install button on this page (or userstyles.world) for the style you want to install.
+For a quick setup check out [my blog](https://a3chron.vercel.app/blog/userstyles#how-to-use).
+
+## More userstyles
 
 You can find more catppuccin themes at their [official site](https://github.com/catppuccin/userstyles).
 
