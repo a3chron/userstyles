@@ -18,6 +18,9 @@ You can find more catppuccin themes at their [official site](https://github.com/
   <summary><strong>Routine</strong></summary>
   <p><a href="https://routine.co">routine.co</a></p>
 
+  Routine made a few updates, so the userstyle is currently broken, I am working on fixing it, but don't have too much time for it, so it may take a while.
+  Contributions are always welcome.
+
   
   [![Install](https://img.shields.io/badge/Install-Stylus-cba6f7?style=for-the-badge&labelColor=363a4f)](https://userstyles.world/api/style/22377.user.css)
 </details>
