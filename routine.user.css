@@ -163,6 +163,57 @@
           background: @base !important;
       }
       
+      .console {
+          caret-color: @accent !important;
+          background-color: @mantle !important;
+      }
+      
+      .console .console-input {
+          color: @text !important;
+      }
+      
+      .parsed-input [contenteditable][placeholder]:empty::before {
+          color: @subtext0 !important;
+      }
+      
+      .parsed-input .console-action {
+          color: @text !important;
+          
+          &.selected {
+              background-color: @crust !important;
+          }
+      }
+      
+      .parsed-input .input .locked p.query {
+          color: @text !important;
+      }
+      
+      .console-completion:is(.selected) {
+          background-color: @crust !important;
+          border-radius: 8px !important;
+      }
+      
+      .console-action.selected .action-description .first-line .base-image .stroke {
+          stroke: @accent !important;
+      }
+      
+      .console-action.selected .action-description .first-line .action {
+          color: @subtext0 !important;
+      }
+      .console-action.selected .action-description .first-line .info {
+          color: @accent !important;
+      }
+      
+      .parsed-input .input p.query {
+          & .value {
+              color: @accent !important;
+          }
+          
+          & .keyword {
+              color: @text !important;
+          }
+      }
+      
       #menu path {
           fill: @text !important;
       }
@@ -195,19 +246,6 @@
       .agenda .sidebar .date:hover {
           background-color: @mantle !important;
           border-radius: 8px !important;
-      }
-      
-      button.base-button.none.main.secondary.default {
-          border-color: @surface0 !important;
-          background-color: @mantle !important;
-      }
-      
-      button.base-button.none.auxiliary.default.selected {
-          background-color: @mantle !important;
-      }
-      
-      button.base-button.none.main.secondary.default svg path.fill {
-          fill: @text !important;
       }
       
       // icons TODO: move old icons here
@@ -270,8 +308,96 @@
           fill: @text !important;
       }
       
+      // buttons
+      
+      button.base-button {
+          cursor: pointer !important;
+      }
+      
+      button.base-button, button.base-button .text {
+          color: @text !important;
+      }
+      
+      button.base-button:is(.disabled) .text {
+          color: @overlay2 !important;
+      }
+      
       button.base-button.red .left:not(.trueColorsIcon) svg .fill {
           fill: @crust !important;
+      }
+      
+      button.base-button.red, button.base-button.red.main, button.base-button.red .text, button.base-button.red.isExpanded.context-action .right {
+          background-color: @red !important;
+          color: @crust !important;
+          border: none;
+      }
+      
+      button.base-button.isExpanded.context-action .right {
+          color: @subtext0 !important;
+      }
+      
+      button.base-button.none.main.secondary.default {
+          border-color: @surface0 !important;
+          background-color: @mantle !important;
+      }
+      
+      button.base-button.none.auxiliary.default.selected {
+          background-color: @mantle !important;
+      }
+      
+      button.base-button.none.main.secondary.default svg path.fill {
+          fill: @text !important;
+      }
+      
+      button.base-button.main:not(.secondary) .text {
+          color: @crust !important;
+      }
+      
+      button.base-button.none.auxiliary.default path {
+          fill: @subtext0 !important;
+      }
+      
+      button.base-button.none.auxiliary.disabled path {
+          fill: @subtext0 !important;
+      }
+      
+      button.base-button.none.main.primary {
+          background-color: @text !important;
+          border-color: @text !important;
+      }
+      
+      button.base-button.none.main.tertiary {
+          color: @subtext0 !important;
+          
+          &:hover {
+              background-color: @crust !important;
+          }
+          
+          .text {
+              color: @subtext0 !important;
+          }
+      }
+      
+      .final-modal .content {
+          background: @mantle !important;
+          border: 2px solid @surface0 !important;
+      }
+      
+      .content .header {
+          border-bottom: 1px solid @surface0 !important;
+      }
+      
+      .content .body p {
+          color: @text !important;
+      }
+      
+      .alert.error {
+          color: @red !important;
+          background-color: rgba(@red, 0.1) !important;
+      }
+      
+      .content .header svg path {
+          fill: @text !important;
       }
       
       #menu nav ul li.menu-item:hover svg {
@@ -286,6 +412,7 @@
       
       #menu .Inbox .stroke,
       #menu .help .stroke,
+      #menu .Journal .stroke,
       #menu .Calendar .stroke {
           fill: @mantle !important;
           stroke: @text !important;
@@ -435,21 +562,6 @@
           background: @crust !important;
       }
       
-      // red button
-      button.base-button.red, button.base-button.red.main, button.base-button.red .text, button.base-button.red.isExpanded.context-action .right {
-          background-color: @red !important;
-          color: @crust !important;
-          border: none;
-      }
-      
-      button.base-button, button.base-button.main, button.base-button .text {
-          color: @text !important;
-      }
-      
-      button.base-button.isExpanded.context-action .right {
-          color: @subtext0 !important;
-      }
-      
       .title.opened {
           color: @accent !important;
       }
@@ -543,14 +655,6 @@
       
       .agenda .sidebar .date p span {
           color: @subtext0 !important;
-      }
-      
-      button.base-button.none.auxiliary.default path {
-          fill: @subtext0 !important;
-      }
-      
-      button.base-button.none.auxiliary.disabled path {
-          fill: @overlay2 !important;
       }
       
       .timeline .line {
