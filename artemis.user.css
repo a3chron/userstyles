@@ -75,6 +75,61 @@
       --bs-heading-color: @text !important;
       --bs-body-color-rgb: @text !important;
       
+      --primary: @accent !important;
+      
+      --artemis-alert-danger-background: mix(@red, black, 15%) !important;
+      --artemis-alert-danger-border: @red !important;
+      --artemis-alert-danger-color: @text !important;
+      
+      --artemis-alert-success-background: mix(@green, black, 15%) !important;
+      --artemis-alert-success-border: @green !important;
+      --artemis-alert-success-color: @text !important;
+      
+      --bs-border-radius: 8px !important;
+      
+      --bs-modal-bg: @mantle !important;
+      
+      --markdown-preview-green: @green !important;
+      --markdown-preview-red: @red !important;
+      
+      --link-item-bg: @crust !important;
+      
+      --close-circle-background: @mantle !important;
+      --close-circle-color: @text !important;
+      --close-circle-border: @text !important;
+      
+      
+      .popover {
+          --bs-popover-bg: @crust !important;
+          --bs-popover-border-color: @surface1 !important;
+          
+          border-radius: 8px !important;
+          
+          & .clone-url {
+              margin-left: 6px;
+              margin-right: 6px;
+          }
+      }
+      
+      .card {
+          --bs-card-border-color: @surface0 !important; 
+          --bs-card-color: @text !important;
+          --bs-card-bg: @crust !important;
+      }
+      
+      .progress {
+          --bs-progress-bg: @surface0 !important;
+          
+          & .text-bg-success {
+              background-color: rgba(@green, 0.8) !important;
+          }
+      }
+      
+      .result-score .text-secondary {
+        color: @subtext0 !important;
+      }
+      
+      
       [style*="background-color: rgb(27, 151, 202)"] {
           background-color: @blue !important;
           color: @crust !important;
@@ -84,9 +139,28 @@
           background-color: @green !important;
           color: @crust !important;
         }
+
+      [style*="background-color: rgb(157, 202, 83)"] {
+          background-color: @teal !important;
+          color: @crust !important;
+        }
+      
+      [style*="background-color: rgb(13, 60, 194)"] {
+          background-color: @yellow !important;
+          color: @crust !important;
+        }
+      
+      [style*="background-color: rgb(173, 86, 88)"] {
+          background-color: @maroon !important;
+          color: @crust !important;
+        }
       
       p {
           color: @text !important;
+      }
+      
+      .alert p {
+          color: @red !important;
       }
       
       a, a:not(.btn):not(.dropdown-item):not(.page-link):not(.nav-link):not(.tab-link) {
@@ -143,6 +217,10 @@
           box-shadow: 0 0 0 .25rem rgba(@accent, 0.4) !important;
       }
       
+      .course-notification-loading-indicator {
+          background-color: @accent !important;
+      }
+      
       --bs-border-color: @surface0 !important;
       --bs-tertiary-color: @subtext0 !important;
       
@@ -152,6 +230,14 @@
       
       #test-sidebar-card-medium:is(.bg-selected) {
           background-color: @surface0 !important;
+      }
+      
+      #programming-exercise-instructions-content .text-secondary {
+          color: @subtext0 !important;
+      }
+      
+      #submission-result-graded .text-secondary {
+          color: @subtext0 !important;
       }
       
       .bg-secondary {
@@ -196,6 +282,10 @@
           color: @red !important;
       }
       
+      .btn .text-danger {
+          color: @crust !important;
+      }
+      
       .border-danger {
           border-color: @red !important;
       }
@@ -207,6 +297,10 @@
       
       .text-warning {
           color: @peach !important;
+      }
+      
+      .btn .text-warning {
+          color: @crust !important;
       }
       
       .border-warning {
@@ -242,6 +336,7 @@
           margin-top: 24px;
           margin-bottom: 24px;
           border: 1px solid @accent !important;
+          border-radius: 8px !important;
       }
       
       .panel-wrapper .vertLine {
@@ -282,6 +377,58 @@
       
       .bg-selected.border-module {
           border-left-color: @subtext0 !important;
+      }
+      
+      .feedback-group h4 {
+          color: @crust !important;
+      }
+      
+      .feedback-item.alert-danger h4 {
+          color: @red !important;
+      }
+      
+      .feedback-item.alert-success h4 {
+          color: @green !important;
+      }
+      
+      .modal-content {
+          background-color: @crust !important;
+          border-color: @surface0 !important;
+      }
+      
+      .multiplechoicecolor-question:not(.changed-question) {
+          background-color: @overlay0 !important;
+      }
+      
+      .tooltip * {
+          color: @text !important;
+      }
+      
+      .hljs {
+          background: @crust !important;
+          color: @text !important;
+      }
+      
+      .hljs-string, .hljs-bullet, .hljs-subst, .hljs-title, .hljs-section, .hljs-emphasis, .hljs-type, .hljs-built_in, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-addition, .hljs-variable, .hljs-template-tag, .hljs-template-variable {
+          color: @green;
+      }
+      
+      .hljs-tag, .hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-strong, .hljs-number, .hljs-name {
+          color: @red;
+      }
+      
+      .connection-warning-popover {
+          --bs-popover-border-color: @red !important;
+          
+          & .popover-body {
+              color: @red !important;
+              background-color: mix(@red, black, 15%) !important;
+              border-radius: 8px;
+          }
+      }
+      
+      .connection-warning {
+          color: @red !important;
       }
     }
 }
