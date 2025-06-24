@@ -16,7 +16,10 @@ You can find more catppuccin themes at their [official site](https://github.com/
 
 <details>
   <summary><strong>Routine</strong></summary>
-  <p><a href="https://routine.co">routine.co</a></p>
+  <p>
+    <a href="https://routine.co">routine.co</a><br />
+    You'll have to enable dark mode in the settings for this to look good.
+  </p>
 
   
   [![Install](https://img.shields.io/badge/Install-Stylus-cba6f7?style=for-the-badge&labelColor=363a4f)](https://userstyles.world/api/style/22377.user.css)
