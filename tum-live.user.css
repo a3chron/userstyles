@@ -10,6 +10,7 @@
 @var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
 @var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
 @var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var select invertLogo "Invert Logo" ["true:On", "false:Off*"]
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://tum.live/") {
@@ -62,6 +63,14 @@
           color: @text !important;
       }
       
+      nav a img {
+          .invertLogo();
+      }
+      
+      .invertLogo() when (@invertLogo = true) {
+          filter: saturate(78%) invert(100%);
+        }
+      
       // video
       
       .dark\:bg-secondary:is(.dark *) {
@@ -105,6 +114,10 @@
           color: @text !important;
       }
       
+      .text-5:is(.dark *) {
+          color: @subtext0 !important;
+      }
+      
       .video-js .vjs-play-progress {
           background-color: @accent !important;
       }
@@ -120,6 +133,16 @@
           color: @crust !important;
           border: none;
           font-weight: 500;
+      }
+      
+      .bg-danger {
+          background-color: @red;
+          color: @crust;
+      }
+      
+      .tum-live-button-primary:is(.dark *) {
+          background-color: @accent;
+          color: @crust;
       }
       
       .tum-live-font-primary:is(.dark *) {
@@ -176,6 +199,14 @@
       .tum-live-footer a:is(.dark *) {
           color: @text !important;
       }
+      
+      // notification indicator
+      
+      .tum-live-icon-button span {
+          background-color: @accent !important;
+          --tw-gradient-to: none;
+          --tw-gradient-from: none;
+        }
     }
 }
 
