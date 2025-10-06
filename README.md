@@ -2,7 +2,9 @@
 A little collection of my own userstyles, probably most of them catppuccin themes
 
 You can either install them via [userstyles.world](https://userstyles.world/user/kurtschambach) or here (by going to the raw file of a userstyle), 
-although userstyles.world is updated more frequently, GitHub only serves as a backup and platform for contributions.
+although userstyles.world is updated more frequently (lie a lot), GitHub only serves as a backup and platform for contributions.
+
+If you wanna contribute / fix something small etc., please take the current style from the userstyles, and not here, as this is outdated most of the time.
 
 ## How to use
 
