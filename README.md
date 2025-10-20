@@ -36,6 +36,14 @@ You can find more catppuccin themes at their [official site](https://github.com/
 </details>
 
 <details>
+  <summary><strong>TUM IT Sec</strong></summary>
+  <p><a href="https://tum.live/">TUM IT Sec</a></p>
+
+  
+  [![Install](https://img.shields.io/badge/Install-Stylus-cba6f7?style=for-the-badge&labelColor=363a4f)](https://userstyles.world/api/style/24750.user.css)
+</details>
+
+<details>
   <summary><strong>Artemis</strong></summary>
   <p><a href="https://artemis.tum.de/">Artemis</a></p>
 
