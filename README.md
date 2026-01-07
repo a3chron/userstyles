@@ -17,7 +17,7 @@ You can find more catppuccin themes at their [official site](https://github.com/
 ## List of userstyles
 
 <details>
-  <summary><strong>Routine</strong></summary>
+  <summary><strong>Routine</strong> (not actively maintained)</summary>
   <p>
     <a href="https://routine.co">routine.co</a><br />
     You'll have to enable dark mode in the settings for this to look good.
